@@ -1,0 +1,5 @@
+ai.py
+__pycache__/
+*.pyc
+drum_patterns.log
+drum_patterns.pdf
