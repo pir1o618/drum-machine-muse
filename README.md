@@ -1,14 +1,14 @@
 # Drum Machine Muse
 
-An interactive Python practice tool for Code in Place (CIPX) that generates custom drum patterns with AI, animates a continuous 4/4 beat on a `tkinter.Canvas` window with synthesized pad sounds on Windows, logs sessions, and exports selected patterns to a PDF practice sheet.
+An interactive Python practice tool built for Code in Place (CIPX 2026). As an acoustic drum hobbyist, I created this project to generate daily practice patterns across different musical styles using AI, complete with a continuous visual beat loop, synthesized pad audio, session logging, and PDF export.
 
 ## Features
 
-- **AI Rhythm Generation:** Prompts for a musical style and generates practice drum patterns via `call_gpt` in `ai.py`.
+- **AI Rhythm Generation:** Prompts for a musical style and generates custom practice drum patterns via `call_gpt` in `ai.py`.
 - **Continuous Canvas Beat Loop:** Animates `HH (Hi-Hat)`, `SN (Snare)`, and `BD (Kick)` pads in a continuous 4/4 groove with a live beat indicator and bar counter until you decide to stop.
 - **Interactive Playback & Tempo Controls:** Includes **Restart**, **Pause / Resume** (`Space`), **- Slower**, **+ Faster**, and **Continue** (`Esc` or close window).
 - **Synthesized Pad Audio (Windows):** Plays short `winsound` tones per drum pad with a **Sound: ON / OFF** toggle (`M`).
-- **Session Log & PDF Export:** Appends generated patterns to a session log file and exports selected patterns to `drum_patterns.pdf` on `exit` using Python's standard library.
+- **Session Log & PDF Export:** Appends generated patterns to `drum_patterns.log` and exports selected patterns to `drum_patterns.pdf` on `exit` using Python's standard library.
 
 ## Setup
 
@@ -17,3 +17,16 @@ An interactive Python practice tool for Code in Place (CIPX) that generates cust
 
 ```python
 API_KEY = "noai-..."
+```
+
+## Usage
+
+Run the application from your local environment (such as VS Code on Windows):
+
+```bash
+python main.py
+```
+
+Enter a rhythm style when prompted, use the Canvas controls to practice or inspect the groove, choose whether to queue each pattern for the PDF sheet (`y`/`n`), and type `exit` to generate `drum_patterns.pdf` and quit.
+
+Happy practicing!
